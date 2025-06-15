@@ -1,0 +1,36 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando repositórios com GIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Criando repositórios no terminal GIT (Init)</h1>
+
+        <h2>Criando a partir da pasta com git bash</h2>
+        <p>
+            Para criar um repositório a partir de uma pasta, você deve clicar nela com o <mark>botão direito do mouse</mark>,
+        em seguida clicar em <mark>git bash here</mark> (Já com o GIT instalado no computador) para abrir o terminal.
+        No terminal, usaremos o comando:
+        </p>
+        <mark class="comando">git init</mark>
+        <p>
+            Esse comando serve para iniciar um repositório localmente, criando configurações git atreladas à pasta (Essas configurações ficam salvas em uma pasta oculta chamada <mark>.git</mark> dentro da própria pasta que escolhemos como repositório.).
+        </p>
+        <p>
+        Após isso, vamos precisar atrelar o repositório local a uma origem remota, que estará instalada no servidor (Github). Para isso, precisaremos do <mark>link da origem remota</mark>, que deve ser acessado no repositório criado, no Github. Com o <mark>link</mark> em mãos, devemos passar o seguinte comando no terminal bash:
+        </p>
+        <mark class="comando">git remote add origin [link do repositório]</mark>
+
+        <h2>Criando repositórios a partir do Github (Clone)</h2>
+        <p>
+            Para criar um repositório a partir do Github, basta clicar em criar, dar um nome e adicionar um <mark>readme</mark>, que terá o conteúdo que você escrever em <mark>description</mark>.
+            Após o repositório ter sido criado na nuvem, vamos clona-lo para a máquina local.
+            Para fazer isso, vamos em uma pasta, <mark>botão direito do mouse</mark>, <mark>git bash here</mark>. No terminal, passaremos o comando:
+        </p>
+        <mark class="comando">git clone [link do repositório] [nome que você quer que a pasta tenha localmente (opcional)]</mark>
+    </main>
+</body>
+</html>
