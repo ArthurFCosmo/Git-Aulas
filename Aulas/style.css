@@ -44,6 +44,24 @@ mark {
     padding-left: 2px;
     color: black;
 }
+
+a {
+    text-decoration: none;
+}
+
 .comando {
     background-color: rgb(255, 255, 123);
+}
+
+.imagem50 {
+    width: 50%;
+    border: 5px solid black;
+    margin: 1em;
+}
+
+.imagem100 {
+    width: 100%;
+    border: 5px solid black;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

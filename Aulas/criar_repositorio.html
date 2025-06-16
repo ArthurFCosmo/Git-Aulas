@@ -7,30 +7,50 @@
 </head>
 <body>
     <main>
-        <h1>Criando repositórios no terminal GIT (Init)</h1>
+        <header>
+            <h1>Criando repositórios no terminal GIT (Init)</h1>
+        </header>
 
-        <h2>Criando a partir da pasta com git bash</h2>
-        <p>
-            Para criar um repositório a partir de uma pasta, você deve clicar nela com o <mark>botão direito do mouse</mark>,
-        em seguida clicar em <mark>git bash here</mark> (Já com o GIT instalado no computador) para abrir o terminal.
-        No terminal, usaremos o comando:
-        </p>
-        <mark class="comando">git init</mark>
-        <p>
-            Esse comando serve para iniciar um repositório localmente, criando configurações git atreladas à pasta (Essas configurações ficam salvas em uma pasta oculta chamada <mark>.git</mark> dentro da própria pasta que escolhemos como repositório.).
-        </p>
-        <p>
-        Após isso, vamos precisar atrelar o repositório local a uma origem remota, que estará instalada no servidor (Github). Para isso, precisaremos do <mark>link da origem remota</mark>, que deve ser acessado no repositório criado, no Github. Com o <mark>link</mark> em mãos, devemos passar o seguinte comando no terminal bash:
-        </p>
-        <mark class="comando">git remote add origin [link do repositório]</mark>
+        <section>
+            <h2>Criando a partir da pasta com git bash</h2>
+            <p>
+                Para criar um repositório a partir de uma pasta, você deve clicar nela com o <mark>botão direito do mouse</mark>,
+            em seguida clicar em <mark>git bash here</mark>.</p>
 
-        <h2>Criando repositórios a partir do Github (Clone)</h2>
-        <p>
-            Para criar um repositório a partir do Github, basta clicar em criar, dar um nome e adicionar um <mark>readme</mark>, que terá o conteúdo que você escrever em <mark>description</mark>.
-            Após o repositório ter sido criado na nuvem, vamos clona-lo para a máquina local.
-            Para fazer isso, vamos em uma pasta, <mark>botão direito do mouse</mark>, <mark>git bash here</mark>. No terminal, passaremos o comando:
-        </p>
-        <mark class="comando">git clone [link do repositório] [nome que você quer que a pasta tenha localmente (opcional)]</mark>
+            <img class="imagem50" src="media/img01 git bash.png" alt="mostrando-git-bash">
+
+            <p>
+            (Já com o GIT instalado no computador) para abrir o terminal.
+            No terminal, usaremos o comando:
+            </p>
+            <a href="https://git-scm.com/docs/git-init" target="_blank" rel="external">
+                <mark class="comando">git init</mark>
+            </a>
+
+            <img class="imagem100" src="media/img02 git init.png" alt="mostrando-git-init">
+
+            <p>
+                Esse comando serve para iniciar um repositório localmente, criando configurações git atreladas à pasta (Essas configurações ficam salvas em uma pasta oculta chamada <mark>.git</mark> dentro da própria pasta que escolhemos como repositório.).
+            </p>
+            <p>
+            Após isso, vamos precisar atrelar o repositório local a uma origem remota, que estará instalada no servidor (Github). Para isso, precisaremos do <mark>link da origem remota</mark>, que deve ser acessado no repositório criado, no Github. Com o <mark>link</mark> em mãos, devemos passar o seguinte comando no terminal bash:
+            </p>
+            <a href="https://git-scm.com/docs/git-remote" target="_blank" rel="external">
+                <mark class="comando">git remote add origin [link do repositório]</mark>
+            </a>
+        </section>
+
+        <section>
+            <h2>Criando repositórios a partir do Github (Clone)</h2>
+            <p>
+                Para criar um repositório a partir do Github, basta clicar em criar, dar um nome e adicionar um <mark>readme</mark>, que terá o conteúdo que você escrever em <mark>description</mark>.
+                Após o repositório ter sido criado na nuvem, vamos clona-lo para a máquina local.
+                Para fazer isso, vamos em uma pasta, <mark>botão direito do mouse</mark>, <mark>git bash here</mark>. No terminal, passaremos o comando:
+            </p>
+            <a href="https://git-scm.com/docs/git-clone" target="_blank" rel="external">
+                <mark class="comando">git clone [link do repositório] [nome que você quer que a pasta tenha localmente (opcional)]</mark>
+            </a>
+        </section>
     </main>
 </body>
 </html>
