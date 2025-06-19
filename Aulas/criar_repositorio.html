@@ -55,7 +55,16 @@
             <a href="https://git-scm.com/docs/git-remote" target="_blank" rel="external">
                 <mark class="comando">git remote add origin <span class="exemplo-inserir">[link do repositório]</span></mark>
             </a>
-            
+
+            <p>Após isso, passaremos o comando:</p>
+            <mark class="comando">git branch -M main</mark>
+            <p>Que serve para trocar a <mark>banch</mark> atual e renomear para Main, basicamente forçar a iniciar o repositório apenas com a <mark>branch</mark> main, para evitar bagunças posteriores.</p>
+
+            <p>Após isso, enviaremos nosso primeiro push com o comando:</p>
+            <mark class="comando">git push -u origin main</mark>
+            <p>Com esse comando, configuraremos o tracking entre nossa <mark>branch</mark> local e nossa <mark>branch</mark> remota. Inserindo nosso repositório <mark>origin</mark>, que já foi linkado anteriormente, e nossa <mark>branch</mark> Main, que foi inserida no fim do comando.</p>
+
+            <p>Nos <mark>pushes</mark> e <mark>pulls</mark> seguintes, não será preciso especificar <mark>branch</mark> e <mark>origin</mark>.</p>
         </section>
 
         <section>
