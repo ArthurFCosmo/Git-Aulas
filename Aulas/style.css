@@ -53,9 +53,11 @@ menu > ul {
 
 menu > ul > li {
     background-color: #333237;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
     text-align: left;
     width: 12vw;
-    height: 24px;
+    height: fit-content;
     padding: 10px;
     margin: 0.3em;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.562)
@@ -66,7 +68,7 @@ menu > ul > li:hover {
     transition-duration: 0.5s;
     text-align: left;
     width: 12vw;
-    height: 24px;
+    height: fit-content;
     padding: 10px;
     margin: 0.3em;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.562)
@@ -119,6 +121,18 @@ a:hover {
     background-color: rgb(255, 255, 123);
 }
 
+.topico {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding: 3px;
+    background-color: rgb(255, 255, 123);
+}
+
+.exemplo-inserir {
+    color: rgb(48, 22, 192);
+}
+
 .imagem50 {
     width: 50%;
     border: 5px solid black;
@@ -131,3 +145,4 @@ a:hover {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
