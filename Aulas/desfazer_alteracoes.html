@@ -22,7 +22,7 @@
         <h1>Desfazendo alterações no repositório</h1>
 
         <h2>Comandos importantes</h2>
-        <mark class="topico">1. git restore</mark>
+        <h2>1. git restore</h2>
         <p>
             Descarta todas as alterações que você fez localmente.
         </p>
@@ -36,41 +36,32 @@
             Ao usr o comando <mark class="comando">git restore</mark>, o repositório voltará a ser exatamente como no último <mark>push</mark>, deletando na sua máquina o arquivo Z, e restaurando os arquivos X e Y.
         </p>
 
-        <mark class="topico">2. git commit --amend -m"<span class="exemplo-inserir">[mensagem]</span>"</mark>
+        <h2>2. git commit --amend -m"<span class="exemplo-inserir-claro">[mensagem]</span>"</h2>
         <p>
             Com esse comando, é possível mudar a mensagem do último <mark>commit</mark> feito.
         </p>
 
-        <mark class="topico">3. git reset</mark>
+        <h2>3. git reset</h2>
         <p>Esse comando serve para voltar a um <mark>commit</mark> anterior. Ele possui 3 variações:</p>
 
-        <mark class="comando">git reset --soft <span class="exemplo-inserir">[head do commit que você quer usar como ponto de retorno]</span></mark>
-        <p>Com esse comando você volta para o <mark>commit</mark> anterior, mas mantém as alterações prontas para serem <mark>commitadas</mark> denovo na staging area, como se você já tivesse feito o <mark class="comando">git add .</mark></p>
+        <mark class="comando">&#x2022; git reset --soft <span class="exemplo-inserir">[head do commit que você quer usar como ponto de retorno]</span></mark>
+        <p>Com esse comando você volta para o <mark>commit</mark> escolhido, mas mantém as alterações prontas para serem <mark>commitadas</mark> denovo na <mark>staging area</mark>, como se você já tivesse feito o <mark class="comando">git add .</mark>, sem modificar os arquivos locais.</p>
 
+        <mark class="comando">&#x2022; git reset --mixed <span class="exemplo-inserir">[head do commit que você quer usar como ponto de retorno]</span></mark>
+        <p>Com esse comando você volta para o <mark>commit</mark> escolhido, mas retira as alterações da <mark>staging area</mark>, necessitando passar um <mark class="comando">git add .</mark> caso queria dar <mark>commit</mark> nos arquivos alterados.</p>
+        <p>Acompanhe as anotações em <mark class="vermelho">vermelho</mark>.</p>
 
+        <img src="media/img08 git reset mixed.png" alt="mostrando-reset-mixed">
 
+        <p>Nesse exemplo tinhamos os <mark>commits</mark> 1; 2 e 3; respectivamente. Passamos o comando <mark class="comando">git reset --mixed</mark> para voltar as mudanças computadas para o estado que estavam no commit 2; descartando tudo do commit 3. A diferença do comando <mark class="comando">git reset --soft</mark> para esse, é que nesse as mudanças ficam aguardando para serem adicionadas, fazendo necessário que você passe um <mark class="comando">git add .</mark> caso queira <mark>commita-las</mark>, como citado anteriormente. Esse comando não faz alterações nos arquivos locais.</p>
 
+        <mark class="comando">&#x2022; git reset --hard <span class="exemplo-inserir">[head do commit que você quer usar como ponto de retorno]</span></mark>
+        <p>Com esse comado você volta para o <mark>commit</mark> escolhido, porém muda localmente os arquivos para o estado em que estavam no momento do <mark>commit</mark>. É muito útil, porém CUIDADO ao usar, pois se usar incorretamente, terá que refazer todas as alterações nos arquivos manualmente.</p>
 
+        <h2>4. Outro uso para o git reset</h2>
+        <p>Você também pode usar dessa forma: <mark class="comando">git reset <span class="exemplo-inserir">[nome do arquivo]</span></mark> para remover arquivos da <mark>staging area</mark>.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <img class="imagem100" src="media/img09 git restore arquivo.png" alt="mostrando-git-restore">
     </main>
     <script>
         function clickMenu() {

@@ -129,14 +129,24 @@ a:hover {
     background-color: rgb(255, 255, 123);
 }
 
+.vermelho {
+    color: red;
+    background-color: white;
+}
+
 .exemplo-inserir {
     color: rgb(48, 22, 192);
+}
+
+.exemplo-inserir-claro {
+    color: rgb(136, 115, 255);
 }
 
 .imagem50 {
     width: 50%;
     border: 5px solid black;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .imagem100 {
