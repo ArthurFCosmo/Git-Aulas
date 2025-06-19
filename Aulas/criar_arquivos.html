@@ -1,75 +1,96 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Criando e modificando arquivos no repositório</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <main>
-            <header>
-                <h1>Criando e modificando arquivos no repositório</h1>
-            </header>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando e modificando arquivos no repositório</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2 class="cabecalho-menu-aulas" onclick="clickMenu()">
+            Aulas
+        </h2>
+        <menu id="itens">
+            <ul>
+                <li><a href="criar_repositorio.html" target="_self">Criando repositórios</a></li>
+                <li id="pag-atual"><a href="criar_arquivos.html" target="_self">Criando arquivos</a></li>
+                <li>Salvando arquivos</li>
+            </ul>
+        </menu>
+    </nav>
+    <main>
+        <header>
+            <h1>Criando e modificando arquivos no repositório</h1>
+        </header>
 
-            <section>
-                <h2>Comandos importantes</h2>
-                <mark class="comando">1. git status</mark>
-                <p>
-                    Mostra os arquivos que faltam ser salvos no repositórios, ou commits, etc.
-                </p>
-                <img class="imagem100" src="media/img05 git status.png" alt="mostrando-git-status">
+        <section>
+            <h2>Comandos importantes</h2>
+            <mark class="comando">1. git status</mark>
+            <p>
+                Mostra os arquivos que faltam ser salvos no repositórios, ou commits, etc.
+            </p>
+            <img class="imagem100" src="media/img05 git status.png" alt="mostrando-git-status">
 
-                <mark class="comando">2. git add [nome do arquivo]</mark>
-                <p>
-                    Adiciona arquivos modificados ou novos em um pacote <mark>(commit)</mark>.
-                </p>
-                <p>
-                    Você pode adicionar todos os arquivos que ainda não foram empacotados usando o comando <mark>git add .</mark> (com o ponto final mesmo).
-                </p>
+            <mark class="comando">2. git add [nome do arquivo]</mark>
+            <p>
+                Adiciona arquivos modificados ou novos em um pacote <mark>(commit)</mark>.
+            </p>
+            <p>
+                Você pode adicionar todos os arquivos que ainda não foram empacotados usando o comando <mark>git add .</mark> (com o ponto final mesmo).
+            </p>
 
-                <mark class="comando">3. git commit -m"[Mensagem do commit]"</mark>
-                <p>Empacota as modificações e registra, recebendo uma mensagem de identificação dentro das aspas.</p>
-                <img class="imagem100" src="media/img06 git commit.png" alt="mostrando-commit">
+            <mark class="comando">3. git commit -m"[Mensagem do commit]"</mark>
+            <p>Empacota as modificações e registra, recebendo uma mensagem de identificação dentro das aspas.</p>
+            <img class="imagem100" src="media/img06 git commit.png" alt="mostrando-commit">
 
-                <mark class="comando">4. git push</mark>
-                <p>Envia o pacote de modificações para o repositório</p>
-            </section>
-            <section>
-                <h2>Outros Comandos</h2>
+            <mark class="comando">4. git push</mark>
+            <p>Envia o pacote de modificações para o repositório</p>
+        </section>
+        <section>
+            <h2>Outros Comandos</h2>
 
-                <mark class="comando">1. touch</mark>
-                <p>Cria arquivos. Ex: <mark class="comando">touch README.md</mark>, que a professora usou para criar um arquivo readme na pasta do repositório. <mark>
-                    <a target="_blank" rel="external" href="https://readme.so/pt">
-                        Clique aqui</a> 
-                        para acessar um site que lhe ajuda a criar arquivos
-                    <a target="_blank" rel="external" href="https://www.markdownguide.org/">markdown</a>
-                     com design bonito.</mark></p>
+            <mark class="comando">1. touch</mark>
+            <p>Cria arquivos. Ex: <mark class="comando">touch README.md</mark>, que a professora usou para criar um arquivo readme na pasta do repositório. <mark>
+                <a target="_blank" rel="external" href="https://readme.so/pt">
+                    Clique aqui</a> 
+                    para acessar um site que lhe ajuda a criar arquivos
+                <a target="_blank" rel="external" href="https://www.markdownguide.org/">markdown</a>
+                    com design bonito.</mark></p>
 
-                <mark class="comando">2. rm -rf [nome da pasta]</mark>
-                <p>
-                    Deleta pastas e todo seu conteúdo.
-                </p>
-                <mark class="comando">3. mkdir [nome da pasta]</mark>
-                <p>Cria pastas</p>
+            <mark class="comando">2. rm -rf [nome da pasta]</mark>
+            <p>
+                Deleta pastas e todo seu conteúdo.
+            </p>
+            <mark class="comando">3. mkdir [nome da pasta]</mark>
+            <p>Cria pastas</p>
 
-                <mark class="comando">4. git log</mark>
-                <p>
-                    Mostra informações sobre o último comando passado no terminal.
-                </p>
+            <mark class="comando">4. git log</mark>
+            <p>
+                Mostra informações sobre o último comando passado no terminal.
+            </p>
 
-                <mark class="comando">
-                    5. Arquivos .gitignore
-                </mark>
-                <p>
-                    Utilizando o comando <mark class="comando">echo [inserir o nome da pasta/arquivo] > .gitignore</mark>, poderemos criar um arquivo de texto que conterá tudo que foi escrito antes do <mark>">"</mark> no código. Todos os arquivos ou pastas listados dentro do <mark>.gitignore</mark> não serão reconhecidos pelo git, e não irão para o repositório. Ex:
-                </p>
-                <img class="imagem100" src="media/img07git ignore.png" alt="mostrando-git-ignore">
-                <p>
-                    Nesse exemplo, a pasta media seria ignorada no repositório.
-                </p>
+            <mark class="comando">
+                5. Arquivos .gitignore
+            </mark>
+            <p>
+                Utilizando o comando <mark class="comando">echo [inserir o nome da pasta/arquivo] > .gitignore</mark>, poderemos criar um arquivo de texto que conterá tudo que foi escrito antes do <mark>">"</mark> no código. Todos os arquivos ou pastas listados dentro do <mark>.gitignore</mark> não serão reconhecidos pelo git, e não irão para o repositório. Ex:
+            </p>
+            <img class="imagem100" src="media/img07git ignore.png" alt="mostrando-git-ignore">
+            <p>
+                Nesse exemplo, a pasta media seria ignorada no repositório.
+            </p>
 
-                
-            </section>
-        </main>
-    </body>
+            
+        </section>
+    </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+</body>
 </html>
