@@ -12,12 +12,14 @@
         </h2>
         <menu id="itens">
             <ul>
-                <li id="pag-atual"><a href="criar_repositorio.html" target="_self">Criando repositórios</a></li>
-                <li><a href="criar_arquivos.html" target="_self">Criando e salvando arquivos</a></li>
-                <li><a href="desfazer_alteracoes.html" target="_self">Desfazendo alterações</a></li>
+                <li id="pag-atual"><a href="1.criar_repositorio.html" target="_self">Criando repositórios</a></li>
+                <li><a href="2.criar_arquivos.html" target="_self">Criando e salvando arquivos</a></li>
+                <li><a href="3.desfazer_alteracoes.html" target="_self">Desfazendo alterações</a></li>
+                <li><a href="4.branches.html" target="_self">Branches</a></li>
              </ul>
         </menu>
     </nav>
+
     <main>
         <header>
             <h1>Criando repositórios no terminal GIT (Init)</h1>
@@ -78,15 +80,16 @@
                 <mark class="comando">git clone <span class="exemplo-inserir">[link do repositório] [nome que você quer que a pasta tenha localmente (opcional)]</span></mark>
             </a>
         </section>
-        <script>
-            function clickMenu() {
-                if (itens.style.display == 'block') {
-                    itens.style.display = 'none'
-                } else {
-                    itens.style.display = 'block'
-                }
-            }
-        </script>
+
     </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>

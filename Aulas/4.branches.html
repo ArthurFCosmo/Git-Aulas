@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta title="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabalhando com branches</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2 class="cabecalho-menu-aulas" onclick="clickMenu()">
+            Aulas
+            </h2>
+            <menu id="itens">
+                <ul>
+                    <li><a href="1.criar_repositorio.html" target="_self">Criando repositórios</a></li>
+                    <li><a href="2.criar_arquivos.html" target="_self">Criando e salvando arquivos</a></li>
+                    <li><a href="3.desfazer_alteracoes.html" target="_self">Desfazendo alterações</a></li>
+                    <li id="pag-atual"><a href="4.branches.html" target="_self">Branches</a></li>
+                </ul>
+            </menu>
+        </nav>
+        <main>
+            <h1>Trabalhando com branches</h1>
+
+            <section>
+                <h2>O que é branch</h2>
+                <p><mark>Branch</mark> é um espaço para testes, que não afeta o código principal do projeto. No começo de todo repositório, trabalhamos na <mark>branch main</mark>. No entanto, nem sempre é conveniente fazer commits para a <mark>branch main</mark>, como quando estamos fazendo testes.</p>
+                <p>Para isso podemos criar outros espaços, como salas de teste (<mark>branch staging</mark>) que não afetam a sala principal (<mark>branch main</mark>).</p>
+                
+
+                <p>Ex:</p>
+                <img class="imagem100" src="media/img10 branch.png" alt="esquema-branch">
+
+                <p>Note que uma <mark>branch</mark> sempre estará apontando para um <mark>commit</mark>, como se ele estivesse selecionado. Geralmente é o <mark>commit</mark> mais recente. Isso sempre será exibido quando passar o comando <mark class="comando">git log</mark>.</p>
+            </section>
+
+            <section>
+                <h2>Como criar uma branch</h2>
+                <p>Para criar uma <mark>branch</mark>, basta passar um comando para trocar da <mark>branch main</mark> para outra, se ela não existir, será criada.</p>
+                <p>Comando para trocar de <mark>branch</mark>:</p>
+                <mark class="comando">git checkout -b <span class="exemplo-inserir">[nome da branch]</span></mark>
+
+                <p>Quando damos o <mark class="comando">checkout</mark> da <mark>branch main</mark> para a <mark>branch staging</mark> nada mudará nos arquivos locais, poderemos continuar adicionando arquivos e dando <mark>commits</mark> na <mark>branch staging</mark>.</p>
+                <p>Mas note que ao dar <mark class="comando">checkout</mark> de volta para a <mark>branch main</mark> os arquivos locais do <mark>staging</mark> desaparecerão, pois não estão presentes na <mark>branch main</mark>.</p>
+            </section>
+
+            <section>
+                <h2>Como trazer alterações do staging para a branch main</h2>
+                <p>Para trazer as alterações do <mark>staging</mark> para a <mark>branch main</mark> e concretiza-las, primeiro precisaremos selecionar a branch alvo da mesclagem, a que receberá as mudanças da branch teste. Para isso, usaremos o <mark class="comando">checkout</mark>.</p>
+
+                <p>Com a branch principal selecionada, usaremos o seguinte comando para mesclar a <mark>branch staging</mark>:</p>
+                <mark class="comando">git merge <span class="exemplo-inserir">[branch staging que será mesclada a branch selecionada no terminal]</span></mark>
+
+                <p>Ex:</p>
+
+                <img class="imagem100" src="media/img11 merge.png" alt="mostrando-merge">
+            </section>
+
+            <section>
+                <h2>Comandos importantes</h2>
+                <h2>1. git branch</h2>
+                <p>Mostra todas as <mark>branches</mark>, e mostra a <mark>branch</mark> selecionada no momento.</p>
+
+                <h2>2. git branch -v</h2>
+                <p>Mostra o último <mark>commit</mark> (apontado) de cada <mark>branch</mark>.</p>
+
+                <h2>3. git branch -d <span class="exemplo-inserir-claro">[nome da branch]</span></h2>
+                <p>Deleta a <mark>branch</mark> selecionada.</p>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+        <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+    </body>
+</html>
