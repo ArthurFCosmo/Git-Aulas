@@ -79,7 +79,7 @@ menu > ul > li:hover {
 }
 
 h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     background-color: rgb(170, 170, 170);
     color: black;
@@ -92,6 +92,17 @@ h2 {
     background-color: #1b1a1d;
     width: fit-content;
     padding: 10px;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+h3::before {    /** INSERIR A BOLINHA ANTES DO H3**/
+  content: "• ";                 
+  font-weight: bold;     
 }
 
 p, li {

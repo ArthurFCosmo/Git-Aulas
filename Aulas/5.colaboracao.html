@@ -1,0 +1,61 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta title="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colaboração</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2 class="cabecalho-menu-aulas" onclick="clickMenu()">
+            Aulas
+            </h2>
+            <menu id="itens">
+                <ul>
+                    <li><a href="1.criar_repositorio.html" target="_self">Criando repositórios</a></li>
+                    <li><a href="2.criar_arquivos.html" target="_self">Criando e salvando arquivos</a></li>
+                    <li><a href="3.desfazer_alteracoes.html" target="_self">Desfazendo alterações</a></li>
+                    <li><a href="4.branches.html" target="_self">Branches</a></li>
+                    <li id="pag-atual"><a href="5.colaboracao.html" target="_self">Colaboração</a></li>
+                </ul>
+            </menu>
+        </nav>
+        <main>
+            <h1>Features de colaboração</h1>
+
+            <section>
+                <h2>Issues</h2>
+                <p>A aba de <mark>issues</mark> é utilizada para reportar bugs, sugerir melhorias, ou dar qualquer sugestão a respeito do projeto.</p>
+
+                <h3>Criando issue</h3>
+                <p>Para criar uma nova <mark>issue</mark>, basta acessar a aba de issues, e clicar em <mark class="comando">nova issue</mark>.</p>
+                <img class="imagem100" src="media/img12 issue.png" alt="issue-github">
+                <p>Abrirá uma aba, nela você inserirá título para a issue, e conteúdo, que será escrito no formato <mark>markdown(.md)</mark>.</p>
+
+                <h3>Usando a issue</h3>
+                <p>Assim que você enviá-la, a issue ficará pública como issue aberta (ainda não resolvida) para todos no repositório, e marcada com um contador, no caso, se for a primeira issue, ela será a <mark>issue #1</mark>.</p>
+                <p>Com a issue pronta, podemos comenta-la.</p>
+                <p>Como <mark>moderador</mark> do repositório, podemos <mark class="comando">delegar</mark> essa issue para algúem (que <mark class="comando">fechará</mark> a issue assim que concluí-la), e podemos nós mesmos <mark class="comando">fecharmos</mark> a issue.</p>
+                <img class="imagem100" src="media/img13 issue pronta.png" alt="issue-pronta">
+
+                <h3>Fechando issue delegada</h3>
+                <p>Para fechar uma issue <mark>delegada</mark> a você como <mark>contribuidor</mark>, basta dar um <mark>commit</mark>, e na <mark>mensagem do commit</mark>, adicionar ao final: <mark class="comando">fix #<span class="exemplo-inserir">[número da issue]</span></mark>, assim a issue fechará automaticamente.</p>
+                <img class="imagem50" src="media/img14 issue fechada.png" alt="issue-fechada">
+
+                <h2>Personalizando issues como moderador</h2>
+                <h3>Templates</h3>
+                <p>Para adicionar um <mark>template</mark> de issues para seus colaboradores, basta acessar o repositório, <mark>settings</mark>, rolar pra baixo até <mark>features</mark>, e checar a caixinha de <mark>features</mark>, depois é só clicar em <mark class="comando">set up templates</mark>. Após isso, basta configurar e commitar.</p>
+            </section>
+            
+        </main>
+        <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+            }
+        </script>
+    </body>
+</html>
