@@ -46,8 +46,73 @@
                 <p>Para adicionar um <mark>template</mark> de issues para seus colaboradores, basta acessar o repositório, <mark>settings</mark>, rolar pra baixo até <mark>features</mark>, e checar a caixinha de <mark>features</mark>, depois é só clicar em <mark class="comando">set up templates</mark>. Após isso, basta configurar e commitar.</p>
             </section>
 
-            <h2>Fork</h2>
-            <p>O <mark class="comando">fork</mark> serve para trazer um repstório de algúem para a sua conta no github, funciona como um <mark class="comando">git clone</mark>.</p>
+            <section>
+                <h2>Fork</h2>
+                <p>O <mark class="comando">fork</mark> serve para trazer um repstório de algúem para a sua conta no github, funciona como um <mark class="comando">git clone</mark>. Após o fork ser feito, você fica com uma "estação de trabalho" própria no seu repositório, no qual você faz modificações, e pode enviar para o repositório original fazendo um <mark>pull request</mark>, que antes de ser integrado, deve ser analisado e aceito pelos moderadores.</p>
+
+                <h3>Como fazer o fork pelo github web</h3>
+                <p>Primeiro, com o repositório alvo aberto, clicamos no botão <mark class="comando">fork</mark></p>
+                <img class="imagem100" src="media/img15 fork.png" alt="botao-fork">
+                <p>Após isso, você deve escolher um nome para seu <mark>fork</mark>, além de decidir se deve copiar apenas a <mark>branch main</mark>, ou todas as branches.</p>
+                <img class="imagem100" src="media/img15 fork2.png" alt="fork-config">
+
+                <h3>Como fazer o fork pelo git</h3>
+                <p>Primeiro, é necessário fazer um <mark>clone</mark> comum do repositório, depois devemos conectar ele ao repositório remoto, para receber as atualizações do repositório. Para conectar usaremos o comando:</p>
+                <mark class="comando">git remote add upstream <span class="exemplo-inserir">[Link do repositório]</span></mark>
+
+                <h3>Trazendo alterações do repositório remoto (sincronizando)</h3>
+                <p>Para trazer as alterações do <mark>repositório original</mark> para o nosso <mark>fork</mark> remoto, basta clicar em <mark class="comando">Sync fork</mark>:</p>
+                 <img class="imagem100" src="media/img16 sync-fork.png" alt="sync-fork">
+                <p>Agora, para trazer as atualizações do repositório local, usa-se o comando:</p>
+                <mark class="comando">git pull upstream main</mark>
+                
+                <p>ou</p>
+                <mark class="comando">git pull origin main</mark>
+            </section>
+
+            <section>
+                <h2>Colaborando no repositório DIO</h2>
+
+                <h3>Criando uma nova branch</h3>
+                <p>Vamos criar uma <mark>branch</mark> conforme os padrões da <mark>documentação (readme)</mark> do próprio repositório:</p>
+                <img class="imagem100" src="media/img17 readme.png" alt="readme">
+
+                <h3>Trabalhando na branch</h3>
+                <p>Nesse exercício adicionei meu <mark>readme.md</mark>, apresentando meu perfil profissional na aba community do repositório.</p>
+                <p>Para fazer isso, pressionei a tecla <mark class="comando">.</mark> dentro do repositório, abrindo o "vscode" do github web, nele eu fiz o procedimento padrão que eu faria no <mark>vscode</mark>:</p>
+
+                <li>Criei um novo arquivo (readme.md)</li>
+                <li>Trabalhei dentro dele:</li>
+                <img class="imagem100" src="media/img18 vscode-web.png" alt="">
+
+                <h3>Dando push para o meu fork</h3>
+                <li>Dei o <mark class="comando">.add</mark> clicando no <mark class="comando">+</mark>:</li>
+                <img class="imagem50" src="media/img19 add-web.png" alt=".add">
+                <li>Escrevi a mensagem de commit que a professora deixou no <mark>readme</mark> do repositório.</li>
+                <li>Commit;</li>
+                <li>Push:</li>
+                <img class="imagem50" src="media/img20 push-web.png" alt="push">
+
+                <h3>Pull request</h3>
+                <p>Após o push, as alterações devem sair do <mark>fork</mark> e serem direcionadas ao <mark>repositório original</mark>, mas para isso precisam ser aprovadas por um moderador, isso garantirá que nossas alterações não causarão problemas ao repositório. Para pedir aprovação, faremos o <mark>pull request</mark>. Primeiro, após termos feito o <mark>push</mark> com suscesso, aparecrá esse botão:</p>
+                <img class="imagem50" src="media/img21 pull-request.png" alt="pull-request-botao">
+
+                <p>Após apertar o botão, seremos direcionados para a página do <mark>pull request</mark>.</p>
+                <li>Nessa página poderemos ter um <mark>template</mark>, que deverá ser preenchido para auxílo dos revisores, e teremos um botão <mark class="comando">create pull request</mark>.</li>
+                <li>Acima da página teremos uma aba com informaçõe sobre o que o <mark>pull request</mark> mandará para revisão no repositório original.</li>
+                <li>Abaixo da página teremos uma aba que mostrará quantos <mark>commits</mark> foram feitos nesse pull request, quantos arquivos serão atualizados, e quantos contribuidores participaram.</li>
+
+                <p>Depois de fazer o <mark>pull request</mark>, ele será revisado pelos moderadores do repositório, e caso seja aprovado, eles darão <mark>merge</mark> das suas mudanças no repositório original, isso será notificado para você no github.</p>
+
+
+            </section>
+
+           
+
+            
+
+        
+
             
             
         </main>

@@ -92,6 +92,7 @@ h2 {
     background-color: #1b1a1d;
     width: fit-content;
     padding: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.322);
 }
 
 h3 {
